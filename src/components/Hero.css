@@ -152,10 +152,27 @@
     line-height: 1.8;
     color: var(--color-text-secondary);
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.code-body::-webkit-scrollbar {
+    height: 6px;
+}
+
+.code-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.code-body::-webkit-scrollbar-thumb {
+    background: var(--gradient-accent);
+    border-radius: 3px;
 }
 
 .code-body pre {
     margin: 0;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 .tech-pills {
@@ -196,11 +213,67 @@
         font-size: 2.5rem;
     }
 
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
     .hero-cta {
         flex-direction: column;
     }
 
     .hero-stats {
         grid-template-columns: 1fr;
+    }
+
+    .code-body {
+        padding: var(--space-4);
+        font-size: 0.75rem;
+        overflow-x: auto;
+    }
+
+    .code-body pre {
+        white-space: pre;
+        overflow-x: auto;
+    }
+
+    .code-display {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .tech-pills {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .code-body {
+        font-size: 0.7rem;
+        padding: var(--space-3);
+    }
+
+    .code-header {
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .window-title {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
