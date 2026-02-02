@@ -1,0 +1,82 @@
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.contact-cta {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-6);
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.cta-text strong {
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.why-card {
+    padding: var(--space-6);
+    text-align: center;
+}
+
+.why-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+}
+
+.why-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--color-text-primary);
+}
+
+.why-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 968px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,102 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 14, 39, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: var(--font-mono);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    transition: all var(--transition-smooth);
+}
+
+.navbar-logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-bracket {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.75rem;
+    font-weight: 700;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.logo-text {
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    padding: 0 var(--space-2);
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--space-8);
+    align-items: center;
+}
+
+.navbar-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    position: relative;
+    transition: color var(--transition-base);
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-accent);
+    transition: width var(--transition-smooth);
+}
+
+.navbar-link:hover {
+    color: white;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: var(--space-4) var(--space-6);
+    }
+
+    .navbar-menu {
+        gap: var(--space-4);
+    }
+
+    .navbar-link {
+        font-size: 0.875rem;
+    }
+}

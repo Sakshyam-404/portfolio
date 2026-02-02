@@ -1,0 +1,69 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.project-card {
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.project-tech {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-accent-blue);
+    font-weight: 600;
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.project-highlights li {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    padding-left: var(--space-6);
+    position: relative;
+    line-height: 1.6;
+}
+
+.project-highlights li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-blue);
+    font-weight: bold;
+}
+
+@media (max-width: 968px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
